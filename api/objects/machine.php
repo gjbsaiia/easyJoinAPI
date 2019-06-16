@@ -79,7 +79,8 @@ class Machine{
     }
     // update entry
     function update(){
-        $query = "UPDATE QUERY"
+        // update query
+        $query = "UPDATE QUERY";
 
         $stmt = $this->conn->prepare($query);
         // sanitize
@@ -98,6 +99,25 @@ class Machine{
         $stmt->bindParam(":isComplete", this->isComplete);
         $stmt->bindParam(":isAccountedFor", this->isAccountedFor);
         $stmt->bindParam(":groups", this->groups);
+
+        // check for failure
+        if($stmt->execute()){
+            return true;
+        }
+        return false;
+    }
+
+    //delete entry
+    function delete(){
+        // delete query
+        $query = "DELETE QUERY";
+
+        $stmt=$this->conn->prepare($query);
+
+        // sanitize
+        $this->id=htmlspecialchars(strip_tags($this->id));
+        // bind
+        $this->bindParam(1, $this->id);
 
         // check for failure
         if($stmt->execute()){
