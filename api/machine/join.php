@@ -50,8 +50,9 @@ if( !empty($data->id) && !empty($data->name) && !empty($data->requester) ){
         $fail = true;
     }
     if($fail){
-        // service unavailable
+        // 503 service unavailable
         http_response_code(503);
         echo json_encode(array("message"=>"Unable to join. Please review credentials, or check EasyJoinAPI container health. \_[*=*]_/"));
     }
 }
+?>
