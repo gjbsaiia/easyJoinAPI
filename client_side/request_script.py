@@ -23,8 +23,8 @@ headers = {
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--ad_domain", default="ProgHSZQ", help="Which Domain? Default's HSZQ", required=False);
-    parser.add_argument("--admin_groups", default="sa-a-cloud-t4", help="Do you need special groups? (format: group1,group2,group3)", required=False)
+    parser.add_argument("--ad_domain", default="SOME_AD", help="Which Domain? Default's ____", required=False);
+    parser.add_argument("--admin_groups", default="SOME_GROUP", help="Do you need special groups? (format: group1,group2,group3)", required=False)
     args = parser.parse_args()
     return args
 
