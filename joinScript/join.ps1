@@ -12,7 +12,7 @@ Param
 
 # generating credentials for service account from secret
 $passwd = ConvertTo-SecureString $env:ServicePassword -AsPlainText -Force
-$cred = New-Object System.Management.Automation.PSCredential ("zadr001q", $passwd)
+$cred = New-Object System.Management.Automation.PSCredential ("SERVICE_ACCOUNT", $passwd)
 # calling main
 Join-Machine -ComputerName $computer_name -Credential $cred -AdminGroups $admin_groups -ADDomain $domain
 
