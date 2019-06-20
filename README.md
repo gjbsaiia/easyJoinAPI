@@ -4,6 +4,7 @@ REST API that handles Windows VM joining to Active Directory
 This project is used to solve the problem of automating Active Directory joins for Windows Virtual Machines.
 I hosted this API on a linux container using the Dockerfile listed - but this could just as easily be deployed
 on a physical server or virtual machine.
+Regardless, the server needs the api folder in /var/www/ and the joinScript in /var/
 </br>
 ## basic idea
 In your terraform to autobuild your Windows VM, you bake the client_side/request_join.py script into the on-start process.
