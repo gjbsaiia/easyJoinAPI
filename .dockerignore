@@ -1,0 +1,12 @@
+# Cleaning up my sloppy docker build practice
+.git
+Dockerfile
+.dockerignore
+gen_aes256_keys.py
+secrets.yml
+README.md
+encryption_testing
+internal_config
+transfer_script.sh
+api_secrets.txt
+backend/aes_key.txt
