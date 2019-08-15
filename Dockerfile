@@ -2,7 +2,6 @@
 FROM php:7.3.6-apache-stretch
 LABEL authors="Griffin Saiia"
 
-COPY docker_config/PGR.crt /opt/scripts/
 COPY docker_config/pip.conf /etc/
 COPY docker_config/.pydistutils.cfg /root/
 
