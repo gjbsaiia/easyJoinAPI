@@ -47,7 +47,7 @@ if(isset($headers['Authorization'])){
             // 201 created
             http_response_code(201);
             #echo json_encode(array("message"=>"[*_*] Hello. I've added the machine, ".$data->{"name"}.", to the DNS listing. Please reboot this machine now."));
-            echo json_encode(array("message"=>"[*_*] Hello. This feature is not currently set up. Interns weren't given access to DNS automation. \_['_']_/ ERR"));
+            echo json_encode(array("message"=>"[*_*] Hello. This feature is not currently set up. You need to configure this for your environment. \_['_']_/ ERR"));
         }
     }
     else{
