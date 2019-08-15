@@ -1,4 +1,4 @@
-# clo-easyADjoin
+# easyADjoin
 REST API to handle Windows VM AD joins onprem. This won't work out of the box for u, sorry - this was built specifically for an unnamed company, but it's pretty cool work and won't take that much to rework for other environments
 
 
