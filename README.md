@@ -1,14 +1,8 @@
 # clo-easyADjoin
-REST API to handle Windows VM AD joins onprem
-
-## Things still needed
-* [clo-pyWinAD](https://githubprod.prci.com/progressive/clo-pyWinAD) needs added to Artifactory, and then ['Dockerfile'](https://githubprod.prci.com/progressive/clo-easyADjoin/blob/master/Dockerfile) needs comment removed on 'pip install pyWinAD' 
-* DNS automation added to ['updateDNS.py'](https://githubprod.prci.com/progressive/clo-easyADjoin/blob/master/backend/updateDNS.py) - then ['logToDNS.php'](https://githubprod.prci.com/progressive/clo-easyADjoin/blob/master/server_side/api/logToDNS.php) needs to have a response changed to show that it's now supported. API container will need rebuilt after. 
-* Kerberos sidecar addition. Once API container is kerberos certified, external joins should be allowed (per Joe Camera).
-* Needs a 'cloudbase-init-unattended.conf' to be created so that following sysprep a new Windows VM gets the [secret](https://githubprod.prci.com/progressive/clo-easyADjoin/blob/master/internal_config/internal_secrets.txt) it needs, and runs the internal process.
+REST API to handle Windows VM AD joins onprem. This won't work out of the box for u, sorry - this was built specifically for an unnamed company, but it's pretty cool work and won't take that much to rework for other environments
 
 
-### All of this is wrapped in the python library [clo-pyWinAD](https://githubprod.prci.com/progressive/clo-pyWinAD)
+### All of this is wrapped in the python library [pyWinAD](https://github.com/gjbsaiia/clo-pyWinAD)
 
     import pyWinAD as winAD
     client = winAD.WinADClient()
@@ -32,7 +26,7 @@ Using pyWinAD like this defaults you to an unauthorized credential, with an Exte
 ## Needs to run in two phases
 
 ### Internal on the VM prior to provisioner
-Should run [configure.py](https://githubprod.prci.com/progressive/clo-easyADjoin/blob/master/internal_config/configure.py) within cloudinit - needs the DNS API credential in cloudinit as well. (not currently set up)
+Should run [configure.py](https://github.com/gjbsaiia/easyADjoin/blob/master/internal_config/configure.py) within cloudinit - needs the DNS API credential in cloudinit as well. (not currently set up)
 This sets the domain name according to convention, and adds itself to the DNS using the VM Internal build from clo-pyWinAD
 
 ### External to the VM via the provisioner
