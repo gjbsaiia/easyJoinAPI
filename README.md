@@ -2,7 +2,7 @@
 REST API to handle Windows VM AD joins onprem. This won't work out of the box for u, sorry - this was built specifically for an unnamed company, but it's pretty cool work and won't take that much to rework for other environments
 
 
-### All of this is wrapped in the python library [pyWinAD](https://github.com/gjbsaiia/clo-pyWinAD)
+### All of this is wrapped in the python library [pyWinAD](https://github.com/gjbsaiia/pyWinAD)
 
     import pyWinAD as winAD
     client = winAD.WinADClient()
