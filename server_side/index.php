@@ -1090,7 +1090,7 @@
             <div class="burning">
                 <img src="img/flames.gif" style="width:cover;">
                 <h1 class="centered">
-                    <a href="https://githubprod.prci.com/progressive/clo-easyADjoin" target="_blank">clo-easyADjoin</a>
+                    <a href="https://github.com/gjbsaiia/easyJoinAPI/" target="_blank">clo-easyADjoin</a>
                 </h1>
                 <p class="just-below" data-line-start="1" data-line-end="2">
                     REST API to handle Windows VM AD joins OnPrem<br><br>
@@ -1100,7 +1100,7 @@
             <h3 class="code-line" data-line-start=3 data-line-end=4 >
                 <a id="All_of_this_is_wrapped_in_the_python_library_clopyWinADhttpsgithubprodprcicomprogressiveclopyWinAD_3"></a>
                 All of this is wrapped in the python library 
-                <a href="https://githubprod.prci.com/progressive/clo-pyWinAD" target="_blank">clo-pyWinAD</a>.<br>
+                <a href="https://github.com/gjbsaiia/pyWinAD" target="_blank">clo-pyWinAD</a>.<br>
             </h3>
             <pre>
                 <code>
@@ -1152,7 +1152,7 @@
                 Internal on the VM prior to provisioner
             </h3>
             <p class="has-line-data" data-line-start="27" data-line-end="29">
-                Should run <a href="https://githubprod.prci.com/progressive/clo-easyADjoin/blob/master/internal_config/configure.py" target="_blank">configure.py</a> within cloudinit.<br>
+                Should run <a href="https://github.com/gjbsaiia/easyJoinAPI/blob/master/internal_config/configure.py" target="_blank">configure.py</a> within cloudinit.<br>
                 This sets the domain name according to convention, and adds itself to the DNS using the VM Internal build from clo-pyWinAD
             </p>
             <h3 class="code-line" data-line-start=30 data-line-end=31 >
