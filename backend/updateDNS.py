@@ -22,10 +22,7 @@ def parse_arguments():
 def logToDns(new_name, raw_addy):
     usr = "super_secure_dns_user"
     pwd = os.getenv('dns_pswd')
-    print("This is where Rick Bliss told me I had to relax, so I didn't accidentally nuke Progressive's system.")
-    print("Check him out at www.RickBliss.com")
-    print("Seriously though, ask Rick Bliss to log this domain, "+new_name+", to this ip, "+raw_addy+".")
-
+    # You need to write this yourself as it's specific to your environment.
 
 if __name__ == '__main__':
     try:
