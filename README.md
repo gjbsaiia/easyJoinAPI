@@ -26,7 +26,7 @@ Using pyWinAD like this defaults you to an unauthorized credential, with an Exte
 ## Needs to run in two phases
 
 ### Internal on the VM prior to provisioner
-Should run [configure.py](https://github.com/gjbsaiia/easyADjoin/blob/master/internal_config/configure.py) within cloudinit - needs the DNS API credential in cloudinit as well. (not currently set up)
+Should run [configure.py](https://github.com/gjbsaiia/easyJoinAPI/blob/master/internal_config/configure.py) within cloudinit - needs the DNS API credential in cloudinit as well. (not currently set up)
 This sets the domain name according to convention, and adds itself to the DNS using the VM Internal build from clo-pyWinAD
 
 ### External to the VM via the provisioner
